@@ -6,7 +6,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!!!!'
 
-@app.route('/lol')
+@app.route('/lol', methods = ['GET', 'POST'])
 def lol():
     text = request.values.get('text')
     return f'lol {text}'
