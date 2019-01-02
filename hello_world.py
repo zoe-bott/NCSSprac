@@ -9,10 +9,12 @@ def hello_world():
 @app.route('/lol', methods = ['GET', 'POST'])
 def lol():
     text = request.values.get('text')
-    return jsonify({
-        'response_type' : "in_channel",
+    return (f'hello {text}')
+    '''return jsonify({
+        'response_type': 'in_channel',
         'text': f'lol {text}',
-    })
+    })'''
+
 
 if __name__ == '__main__':
     app.run()
