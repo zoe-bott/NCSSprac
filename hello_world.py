@@ -14,10 +14,11 @@ def lol():
     if text == 'hello' or text == 'hi' or text == 'hey':
         response = 'Hi there, nice to meet you!'
 
-    return jsonify({
+    return response
+    '''return jsonify({
         'response_type': 'in_channel',
         'text': f'{response}',
-    })
+    })'''
 
 
 if __name__ == '__main__':
