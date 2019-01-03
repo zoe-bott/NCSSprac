@@ -16,7 +16,7 @@ def lol():
 
     return jsonify({
         'response_type': 'in_channel',
-        'text': '{response}',
+        'text': f'{response}',
     })
 
 
