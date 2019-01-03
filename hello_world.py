@@ -30,7 +30,7 @@ def alexa():
         query = request.json['request']['intent']['slots']['Query']['value']
         response_text = 'You said: ' + query
     except KeyError:
-        response_text = 'Did you say something?''''
+        response_text = 'Did you say something?'''
 
     return jsonify({
         'version': '0.1',
