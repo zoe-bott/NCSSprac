@@ -24,20 +24,20 @@ def lol():
 def alexa():
     data = request.get_json()
 
-    try:
+    '''try:
         # The request structure is deeply nested
         # We expect the requested intent to have a slot called 'Query'
         query = request.json['request']['intent']['slots']['Query']['value']
         response_text = 'You said: ' + query
     except KeyError:
-        response_text = 'Did you say something?'
+        response_text = 'Did you say something?''''
 
     return jsonify({
         'version': '0.1',
         'response': {
         'outputSpeech': {
             'type': 'PlainText',
-            'text': response_text,
+            'text': 'Hello welcome to my bot, the zobot!',
         },
         'shouldEndSession': False,  # Keep the app alive
         }
