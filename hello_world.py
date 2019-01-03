@@ -8,12 +8,16 @@ def hello_world():
 
 @app.route('/lol', methods = ['GET', 'POST'])
 def lol():
-    text = request.values.get('text')
-    return (f'hello {text}')
-    '''return jsonify({
+    text = request.values.get('text').lower()
+    response = "I don't understand, sorry"
+
+    if text == 'hello' or text == 'hi' or text == 'hey':
+        response = 'Hi there, nice to meet you!'
+
+    return jsonify({
         'response_type': 'in_channel',
-        'text': f'lol {text}',
-    })'''
+        'text': '{response}',
+    })
 
 
 if __name__ == '__main__':
