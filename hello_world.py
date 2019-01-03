@@ -26,7 +26,7 @@ def alexa():
     'response': {
       'outputSpeech': {
         'type': 'PlainText',
-        'text': 'Hello, welcome to my bot'
+        'text': 'Hello, welcome to my bot, the zo bot!'
       }
     }
   })
