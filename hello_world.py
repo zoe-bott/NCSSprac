@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import ujson
+#import ujson
 
 app = Flask(__name__)
 
