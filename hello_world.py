@@ -14,11 +14,23 @@ def lol():
     if text == 'hello' or text == 'hi' or text == 'hey':
         response = 'Hi there, nice to meet you!'
 
-    return response
-    '''return jsonify({
+    return jsonify({
         'response_type': 'in_channel',
         'text': f'{response}',
-    })'''
+    })
+
+@app.route('/alexa', methods=['POST', 'GET'])
+def alexa():
+  return jsonify({
+    'version': '0.1',
+    'response': {
+      'outputSpeech': {
+        'type': 'PlainText',
+        'text': 'Hello, welcome to my bot'
+      }
+    }
+  })
+
 
 
 if __name__ == '__main__':
