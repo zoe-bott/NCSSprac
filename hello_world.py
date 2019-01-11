@@ -43,6 +43,7 @@ def jokes():
 
     return f'{setup}<br>{punchline}'
 
+
 @app.route('/alexa', methods=['POST', 'GET'])
 def alexa():
     data = request.get_json()
