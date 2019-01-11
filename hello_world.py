@@ -41,7 +41,7 @@ def jokes():
     setup = response['setup']
     punchline = response['punchline']
 
-    return f'{setup}<br>{punchline}'
+    return f'{setup}:  {punchline}'
 
 
 @app.route('/alexa', methods=['POST', 'GET'])
