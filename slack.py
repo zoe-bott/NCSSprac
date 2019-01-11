@@ -18,10 +18,12 @@ def slack_event():
   print(payload)  # Print payload for debugging.
 
   if payload:
-    on_enter_state('SETUP', context)
+    state, context, output = on_enter_state('SETUP', context)
     user_input = payload.get('text')
-    on_input('SETUP', user_input, context)
-    # todo: finish this slack interface!
+    state, context, output = on_input('SETUP', user_input, context)
+    return output
+  else:
+    return 'hello'
 
 if __name__ == '__main__':
   app.run()
