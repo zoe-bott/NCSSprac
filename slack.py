@@ -21,7 +21,7 @@ def slack_event():
     state, context, output = on_enter_state('SETUP', context)
     user_input = payload.get('text')
     state, context, output = on_input('SETUP', user_input, context)
-    return output
+    
   else:
     return 'hello'
 
