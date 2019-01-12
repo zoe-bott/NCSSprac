@@ -19,7 +19,7 @@ def alexa():
   request_type = data['request']['type']
   if request_type == 'IntentRequest':
     query = data['request']['intent']['slots']['query']['value']
-    response_text = 'You said: ' + query
+    response_text = query
   else:
     response_text = 'Say something!'
 
