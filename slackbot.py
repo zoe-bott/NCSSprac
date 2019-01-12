@@ -1,7 +1,8 @@
-from flaskapp import app 
 from flask import request 
 from bot2 import on_enter_state, on_input
 
+
+app = Flask(__name__)
 state = 'NO QUERY'
 data = {}
 
