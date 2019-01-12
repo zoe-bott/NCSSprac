@@ -12,7 +12,7 @@ def slack_ask():
     global state, data
     output = ""
     
-    input_text = request.values['question']
+    input_text = request.values.get('text')
     if input_text:
         state, data, output_on_input = on_input(state, input_text, data)
     else:
